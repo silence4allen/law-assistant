@@ -1,0 +1,13 @@
+rag:
+  top_k: 10  # 扩大初始检索数量
+  rerank_top_n: 5  # 重排序后保留数量
+  rerank_min_score: 0.5 # 重排序后最低分阈值
+  llm_temperature: 0.3 # 大模型采样温度
+  llm_top_p: 0.9 # 大模型核取样
+baidu_api:
+  api_key: ""
+  embedding_model: "bge-large-zh" # 支持：bge-large-zh、bge-large-en、tao-8k、embedding-v1(384维，不可用)
+  rerank_model: "bce_reranker_base" # 其他没测试
+zhipu_api:
+  api_key: ""
+  llm_model: "glm-z1-airx" # 支持 glm-z1-air、glm-z1-airx、glm-z1-flash、GLM-4-Air-250414、GLM-4-Plus、GLM-4-AirX等（z1系列带思维链）
